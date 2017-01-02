@@ -3,10 +3,10 @@ title: Mill Blog
 SEOTitle: 米尔的博客 | Mill Blog
 header-img: img/home-bg.jpg
 email: mewwind@163.com
-description: "关于前端 | 这里是 Mill 的个人博客，与你一起发现更大的世界。"
+description: "关于前端与生活 | 这里是 Mill 的个人博客，与你一起发现更大的世界。"
 keyword: "米尔, Mill, Mewwind Blog, 博客, 个人网站, 互联网, 前端, Visualization, 图标，可视化"
-url: "https://huangxuan.me"              # your host, for absolute URL
-baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
+#url: "https://mewwind.com"              # your host, for absolute URL
+#baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
 
 
 
@@ -70,8 +70,8 @@ kramdown:
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "写写代码，做做设计，<br>离开世界之前，一切都是过程"
-#sidebar-avatar: /img/avatar-hux.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-about-description: "码路漫漫其修远兮，<br>吾将上下而码之"
+sidebar-avatar: /img/avatar-mill.png      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
 
@@ -85,7 +85,8 @@ featured-condition-size: 1              # A tag will be featured if the size of 
 chrome-tab-theme-color: "#000000"
 service-worker: true
 
-
+#Set timezone for CN
+timezone: CN
 
 # Friends
 friends: [
