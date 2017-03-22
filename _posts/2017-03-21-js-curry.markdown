@@ -1,5 +1,14 @@
+---
+layout:     keynote
+title:      "Javascript中函数的柯里化"
+navcolor:   "invert"
+date:       2017-3-21
+author:     "Mill"
+tags:
+    - 前端开发
+    - JavaScript
+---
 # javascript中函数的柯里化
-
 ### 什么是柯里化
 先用一个简单的例子来引出
 ```javascript
@@ -9,7 +18,6 @@ var add=function(a,b,c){
 ```
 需要写一个函数，满足```curry(add)(1)(2)(3)```输出结果为6。
 由此可以看出curry 函数的功能：每传递一个参数调用函数，就返回一个新函数处理剩余的参数
-
 ### 柯里的实现
 ```javascript
 var curry = function(fn){
