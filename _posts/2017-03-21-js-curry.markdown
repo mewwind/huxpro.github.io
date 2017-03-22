@@ -8,16 +8,18 @@ tags:
     - 前端开发
     - JavaScript
 ---
- ## 什么是柯里化
+## 什么是柯里化
+
 先用一个简单的例子来引出
 ```javascript
 var add=function(a,b,c){
     return a+b+c;
 }
 ```
-需要写一个函数，满足```curry(add)(1)(2)(3)```输出结果为6。
-由此可以看出curry 函数的功能：每传递一个参数调用函数，就返回一个新函数处理剩余的参数
- ## 柯里的实现
+<br>需要写一个函数，满足```curry(add)(1)(2)(3)```输出结果为6。
+<br>由此可以看出curry 函数的功能：每传递一个参数调用函数，就返回一个新函数处理剩余的参数
+
+## 柯里的实现
 ```javascript
 var curry = function(fn){
     if(typeof fn!=='function'){
@@ -38,9 +40,9 @@ var curry = function(fn){
 };
 curry(add)(100)(200)(300)
 ```
-首先调用```curry(add)```,会返回一个闭包函数```curriedFn```。
+<br>首先调用```curry(add)```,会返回一个闭包函数```curriedFn```。
 这个函数记住了add所需要的参数个数```fn.length```。
-继续执行```curriedFn(100)```,该函数会判断当前参数个数是否达到了add所需要的参数个数。
-此时```args.length```是1，并未达到add函数所需要的3个，就继续返回一个带有参数100的，并且会合并新参数的闭包。
-这里用```args.concat(slice.call(arguments))```来合并， 这里用slice.call(arguments)把arguments转成真正的数组，如果对这点不理解可以参考 [ STACKOVERFLOW](http://stackoverflow.com/questions/7056925/how-does-array-prototype-slice-call-work)
-以此往后，当达到参数个数时，才会去用合并出来的arguments去执行add。
+<br>继续执行```curriedFn(100)```,该函数会判断当前参数个数是否达到了add所需要的参数个数。
+<br>此时```args.length```是1，并未达到add函数所需要的3个，就继续返回一个带有参数100的，并且会合并新参数的闭包。
+<br>这里用```args.concat(slice.call(arguments))```来合并， 这里用slice.call(arguments)把arguments转成真正的数组，如果对这点不理解可以参考 [ STACKOVERFLOW](http://stackoverflow.com/questions/7056925/how-does-array-prototype-slice-call-work)
+<br>以此往后，当达到参数个数时，才会去用合并出来的arguments去执行add。
