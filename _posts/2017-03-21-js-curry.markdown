@@ -4,6 +4,7 @@ title:      "Javascript中函数的柯里化"
 navcolor:   "invert"
 date:       2017-3-21
 author:     "Mill"
+header-image: img/post-bg-js-curry.jpg
 tags:
     - 前端开发
     - JavaScript
