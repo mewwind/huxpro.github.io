@@ -4,7 +4,7 @@ title:      "浅谈Javascript中publish/subscribe模式"
 navcolor:   "invert"
 date:       2017-3-22
 author:     "Mill"
-header-image: img/post-bg-pubsub-pattern.jpg
+header-img: img/post-bg-pubsub-pattern.jpg
 tags:
     - 前端开发
     - JavaScript
