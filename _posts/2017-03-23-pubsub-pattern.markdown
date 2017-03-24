@@ -12,16 +12,16 @@ tags:
 ---
 
 ## 为什么要使用Publish/Subscribe设计模式
-解耦，解耦，解耦！
-我们都希望每个component做到独立，方便复用。
-但同时又希望它们之间存在联系。
-这时候就需要publish/subscribe模式。
-以MC*框架为例，通常Model层会处理很多业务相关的逻辑，它可能需要和很多个View模块进行交互。
-这时候如果采用p/s模式，model层就只需要publish一个event，相关的View模块就会接收到，进行更新。
-我们也可以把这种模式认为是Observer模式。
+**解耦，解耦，解耦**！  
+我们都希望每个component做到独立，方便复用。  
+但同时又希望它们之间存在联系。  
+这时候就需要publish/subscribe模式。  
+以MC*框架为例，通常Model层会处理很多业务相关的逻辑，它可能需要和很多个View模块进行交互。  
+这时候如果采用p/s模式，Model层就只需要publish一个event，相关的View模块就会接收到，进行更新。  
+我们也可以把这种模式认为是```Observer```模式。  
 ## Publish/Subscribe模式的实现
 #### 实现一：利用jQuery的callbacks
-```javascript
+~~~javascript
 var topics = {};
 jQuery.Topic = function(id){
     var callbacks, topic = topics[id];
@@ -36,13 +36,15 @@ jQuery.Topic = function(id){
     }
     return topic;
 }
-$.Topic("message").subscribe(function(data) {
+var messageHandler = function(data) {
     console.log("a publish has occurred, get data:" + data);
-});
+};
+$.Topic("message").subscribe(messageHandler);
 $.Topic("message").publish('send');
-```
+$.Topic("message").unsubscribe(messageHandler);
+~~~
 #### 实现二：原生js
-```javascript
+~~~javascript
 var pubsub = {};
 (function(myObject){
     //Storage for topic which can be broadcast or listened to.
@@ -81,9 +83,12 @@ var pubsub = {};
     };
 
 })(pubsub);
-var token = pubsub.subscribe('newMessage', function(topic, a){console.log("Log1:"+"Topic" + topic+ ",Message" + a)});
-var token2 = pubsub.subscribe('newMessage', function(topic, a){console.log("Log2:"+"Topic" + topic+ ",Message" + a)});
+//subscribe listener for topic "newMessage"
+var token = pubsub.subscribe('newMessage', function(topic, a){console.log("Log1:"+ a)});
+//Also, you can subscribe listener2 for same topic
+var token2 = pubsub.subscribe('newMessage', function(topic, a){console.log("Log2:"+ a)});
+
 pubsub.publish('newMessage', 'Hello');
 pubsub.unsubscribe(token2);
 pubsub.publish('newMessage', 'Hello');
-```
+~~~
