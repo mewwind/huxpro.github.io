@@ -35,7 +35,7 @@ Flex布局是一整套属性，而不是单一属性。它需要有个flex conta
  ```wrap```： 换行，第一行在上方  
  ```wrap-reverse```： 换行，第一行在下方  
 ### 3. flex-flow
-    ```flex-flow```是```flex-direction```和```flex-wrap```的简写模式。
+该属性是```flex-direction```和```flex-wrap```的简写模式。  
 ### 4. justify-content
 该属性定义了item在主轴上的对齐方式  
  ```flex-start``` 左对齐  
