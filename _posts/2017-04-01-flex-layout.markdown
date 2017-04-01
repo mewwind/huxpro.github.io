@@ -24,25 +24,25 @@ Flex布局是一整套属性，而不是单一属性。它需要有个flex conta
 ## 容器的属性
 ### 1. flex-direction
 该属性决定主轴的方向，有4个值：  
-```row```： 主轴为水平方向，且从左端开始  
-```row-reverse```： 主轴为水平方向，且从右端开始  
-```column```： 主轴为垂直方向，且从上端开始  
-```column-reverse```： 主轴为垂直方向，且从下端开始  
+ ```row```： 主轴为水平方向，且从左端开始  
+ ```row-reverse```： 主轴为水平方向，且从右端开始  
+ ```column```： 主轴为垂直方向，且从上端开始  
+ ```column-reverse```： 主轴为垂直方向，且从下端开始  
 
 ### 2. flex-wrap
 该属性定义了主轴上排不下该如何换行  
-```nowrap```： 不换行  
-```wrap```： 换行，第一行在上方  
-```wrap-reverse```： 换行，第一行在下方  
+ ```nowrap```： 不换行  
+ ```wrap```： 换行，第一行在上方  
+ ```wrap-reverse```： 换行，第一行在下方  
 ### 3. flex-flow
-```flex-flow```是```flex-direction```和```flex-wrap```的简写模式。
+    ```flex-flow```是```flex-direction```和```flex-wrap```的简写模式。
 ### 4. justify-content
 该属性定义了item在主轴上的对齐方式  
-```flex-start``` 左对齐  
-```flex-end``` 右对齐  
-```center``` 居中  
-```space-between``` 两端对齐，item的中间的间隔相等，两端无空间  
-```space-around``` 每个item两侧的间隔均相等  
+ ```flex-start``` 左对齐  
+ ```flex-end``` 右对齐  
+ ```center``` 居中  
+ ```space-between``` 两端对齐，item的中间的间隔相等，两端无空间  
+ ```space-around``` 每个item两侧的间隔均相等  
 ### 5. align-items
 该属性定义了item在交叉轴上的对齐方式  
 **flex-start**， **flex-end**，**center**， **baseline**， **stretch**  
@@ -89,15 +89,15 @@ Ex1. ```flex-grow```：三个div的属性值分别为1，2，1
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
 浏览器宽度 > 800px  
-```flex-flow```: **row wrap**, ```justify-content```: **flex-end**;
+ ```flex-flow```: **row wrap**, ```justify-content```: **flex-end**;
 ![Nav menu > 800px](http://onppapi6x.bkt.clouddn.com/navmenu-gt800px.png)  
 
 浏览器宽度在600px和800px之间  
-```flex```: **1 0 auto**; flex-grow被设为1，各个item等分整个container。
+ ```flex```: **1 0 auto**; flex-grow被设为1，各个item等分整个container。
 ![Nav menu > 800px](http://onppapi6x.bkt.clouddn.com/navmenu-800px.png)
 
 浏览器宽度小于600px
-```flex-flow```: **column wrap**
+ ```flex-flow```: **column wrap**
 ![Nav menu > 800px](http://onppapi6x.bkt.clouddn.com/navmenu-600px.png)
 
 ### 2. 圣杯布局
