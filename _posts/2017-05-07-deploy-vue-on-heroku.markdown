@@ -4,7 +4,7 @@ title:      "如何部署vue+webpack项目到heroku"
 navcolor:   "invert"
 date:       2017-5-7
 author:     "Mill"
-header-img: img/post-bg-kaiser-wilhelm.jpg
+header-img: img/post-bg-stonehenge.jpg
 tags:
     - vue
     - webpack
